@@ -1,0 +1,77 @@
+{
+    //"training"
+    /* Training related parameters */
+    "is_training": 1, // status
+    "train_epochs": 200, // train epochs
+    "batch_size": 1024, // batch size of train input data
+    "patience": 16, // early stopping patience
+    "learning_rate": 0.02, //0.008, // optimizer learning rate
+    "loss": "dv", // loss function
+    "lradj": "type1_0.8", //,"type1_0.8", // adjust learning rate
+    "use_amp": false, // use automatic mixed precision training
+    "optimizer": "adam", // optimizer name, options: [adam, rmsprop]
+    "n_draws": 1, // number of draws for DV potential calculation
+    "exp_clipping": "inf", // exponential clipping for DV potential calculation
+    "alpha_dv_reg": 0.0, // alpha for DV regularization on C constant
+    "num_workers": 0, // data loader num workers
+    "itr": 1, // experiments times
+    "log_interval": 5, // training log print interval
+
+    //"model"
+    /* Model related parameters */
+    "model": "Decoder_Model", // model name, options: [Transformer_Encoder, LSTM, Autoformer, Informer, Transformer]
+    "seq_len": 0, // input sequence length
+    "label_len": 90, // start token length. pre-prediction sequence length for the encoder
+    "pred_len": 30, // prediction sequence length
+    "y_dim": 1, // y input size - exogenous values
+    "x_dim": 1, // x input size - endogenous values
+    "c_out": 1, // output size
+    "d_model": 32, //64, // dimension of model
+    "n_heads": 8, // num of heads
+    "time_layers": 1, // num of attention layers
+    "ff_layers": 1, //2, // num of ff layers
+    "d_ff": 64, //256, // dimension of fcn
+    "factor": 1, // attn factor (c hyper-parameter)
+    "distil": true, // whether to use distilling in encoder, using this argument means not using distilling
+    "dropout": 0.0, // dropout
+    "embed": "fixed", // time features encoding, options:[timeF, fixed, learned]
+    "activation": "elu", // activation
+    "output_attention": true, // whether to output attention in encoder
+
+    //"process_channel"
+    /* Process and Channel related parameters */
+    "use_ndg": true, // use NDG instead of previous created dataset.
+    "channel_ndg_info": {
+        "type": "GMA100",
+        "sigma_noise": 1, //0.3162,
+        "alpha": 0.5,  // alpha parameter for noise smoothing
+        "channel_feedback": false, // feedback in NDG
+        "n_samples": 102400, // sequence length of the process (according to the data)
+        "memory_cut": false, // data stride - for RNN its recommended to be true. Transformer can be set to true
+        "ndg": {
+            "noise": "uniform", // uniform or gaussian
+            "constraint_value": 1, //31.62, // 1,
+            "constraint_type": "norm",
+            "constraint_zero_mean": true,
+            "model": "LSTM", // Decoder_Model or LSTM
+            "time_layers": 1, // number of RNN layers in NDG
+            "ff_layers": 1, //2, // number of FF layers in NDG
+            "d_ff": 64, // dimension of fcn in NDG
+            "d_model": 32, // dimension of model in NDG
+            "learning_rate": 0.005,//0.0008 - for Transformer,  //0.0008 - for LSTM, //0.001, // optimizer learning rate for NDG
+            "alternate_rate": 4, // alternate learning rate between NDG and DINE - number epochs
+            "start_train": 2, // start training NDG after this number of epochs
+        }
+    }, // channel information. ONLY when use_ndg is true
+
+    // "experiment"
+    /* Experiment related parameters */
+    "wandb": false, // activating wandb updates
+    "tags": [], // wandb tags
+    "save": "TMP", // name of main directory
+    "model_id": "EXP", // model id
+    "seed": 2021, // seed number
+    "checkpoints": "checkpoints", // location of model checkpoints
+    "use_gpu": true, // use gpu - if mentioned in args, no gpu
+    "devices": "3", // device ids of multile gpus
+}
