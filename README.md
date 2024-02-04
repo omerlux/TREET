@@ -8,11 +8,11 @@
 [![pytorch](https://img.shields.io/badge/PyTorch-2.0.1-EE4C2C.svg?style=flat&logo=pytorch)](https://pytorch.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This work proposes a novel transformer-based approach for estimating the transfer entropy (TE) for ergodic and stationary processes, incorporating the state-of-the-art capabilities of transformers. 
+This work proposes a novel transformer-based approach for estimating the transfer entropy (TE) for stationary processes, incorporating the state-of-the-art capabilities of transformers. 
 
 TREET, transfer entropy estimation via transformers, is a neural network attention-based estimator of TE over continuous spaces. The proposed approach introduces the TE as a Donsker-Vardhan representation and shows its estimation and approximation stages, to prove the estimator consistency. A detailed implementation is given with elaborated modifications of the attention mechanism, and an estimation algorithm. In addition, estimation and optimization algorithm is presented with Neural Density Generator (NDG) as auxiliary model.
 
-We demonstrated the algorithms in various sequence-related tasks, such as estimating channel capacity of bounded memory channels, while proving the relation between it to the TE, emphasizing the memory capabilities of the estimator, and presenting feature analysis on the Apnea disease dataset.
+We demonstrated the algorithms in various sequence-related tasks, such as estimating channel coding capacity, while proving the relation between it to the TE, emphasizing the memory capabilities of the estimator, and presenting feature analysis on the Apnea disease dataset.
 
 [TREET: TRanasfer Entropy Estimation via Transformers Paper]()
 
