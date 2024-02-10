@@ -97,4 +97,6 @@ We appreciate the following sources for code base and datasets:
 
 - Apnea Data - https://physionet.org/content/santa-fe/1.0.0/ 
 
+- Logo making - https://openai.com/dall-e/
+
 
