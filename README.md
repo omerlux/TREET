@@ -77,11 +77,13 @@ python run.py --config <file>.json5
 If you find this repo useful, please cite our paper. 
 
 ```
-@inproceedings{lux2024treet,
-  title={TREET: TRansfer Entropy Estimation via Transformers},
-  author={Luxembourg, Omer and Tsur, Dor and Permuter, Haim},
-  booktitle={},
-  year={2024}
+@misc{luxembourg2024treet,
+      title={TREET: TRansfer Entropy Estimation via Transformer}, 
+      author={Omer Luxembourg and Dor Tsur and Haim Permuter},
+      year={2024},
+      eprint={2402.06919},
+      archivePrefix={arXiv},
+      primaryClass={cs.IT}
 }
 ```
 
