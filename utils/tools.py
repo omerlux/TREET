@@ -232,7 +232,7 @@ def set_parameters(args):
         tags = ["Debug" if args.debug else "Exp", args.data, args.model]
         if hasattr(args, 'tags'):
             tags.extend(eval(args.tags) if type(args.tags) == str else args.tags)
-        wandb.init(project="dineformer", entity="omerlux", config=args, dir='./',
+        wandb.init(project="treet", entity="omerlux", config=args, dir='./',
                    group=group_name, tags=tags)
         config = wandb.config
 
