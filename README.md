@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./pic/DALL-E_logo.png" alt="TREET - made with DALL·E" width=20% height="20%" >
+  <img src="./pic/DALL-E_logo.png" alt="TREET - made with DALL·E" width="20%" height=auto >
 </p>
 
 # TREET: TRansfer Entropy Estimation via Transformers
@@ -27,13 +27,13 @@ All results are presented in our paper.
 We present a novel algorithm to estimate TE for a given memory parameter `l`,
 
 <p align="center">
-<img src=".\pic\treet_scheme.png" width=80% height=80% alt="" align=center />
+<img src=".\pic\treet_scheme.png" width=80% height=auto alt="" align=center />
 <br><br>
 <b>Figure 1.</b> Overall scheme for estimation process (TE first part).
 </p>
 
 <p align="center">
-<img src=".\pic\treet_arch.png" width=70% height=70% alt="" align=center />
+<img src=".\pic\treet_arch.png" width=70% height=auto alt="" align=center />
 <br><br>
 <b>Figure 2.</b> Overall architecture for estimation (TE first part).
 </p>
@@ -45,13 +45,13 @@ We present a novel algorithm to estimate TE for a given memory parameter `l`,
 In addition, we use Neural Distribution Generator (NDG) for optimizing TE, while estimating it, with alternate learning procedure, 
 
 <p align="center">
-<img src=".\pic\treet_ndg_scheme.png" width=80% height=80% alt="" align=center />
+<img src=".\pic\treet_ndg_scheme.png" width=80% height=auto alt="" align=center />
 <br><br>
 <b>Figure 3.</b> Overall scheme for optimization and estimation process (TE first part).
 </p>
 
 <p align="center">
-<img src=".\pic\ndg_arch.png" width=50% height=50% alt="" align=center />
+<img src=".\pic\ndg_arch.png" width=50% height=auto alt="" align=center />
 <br><br>
 <b>Figure 4.</b> NDG architecture for estimation (without feedback).
 </p>
